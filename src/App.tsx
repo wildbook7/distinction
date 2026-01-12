@@ -1,17 +1,20 @@
-import { useState } from "react"
+import { useState } from "react";
 
 function App() {
-	const [text, setText] = useState("")
-	const [result, setResult] = useState("")
-	const correctAnswer = "divine intervention"
+	const [text, setText] = useState("");
+	const [result, setResult] = useState("");
+	const correctAnswer =
+		"Woman: You're entitled to your beliefs, but how can you look at the world and not believe" +
+		" in a higher being? How can it be so perfect without divine intervention? Besides," +
+		" we all need a framework for how to live morally and make tough decisions.";
 
 	const handleCheck = () => {
 		if (text === correctAnswer) {
-			setResult("正解！")
+			setResult("正解！");
 		} else {
-			setResult(`不正解。正解は「${correctAnswer}」です。`)
+			setResult(`不正解。正解は「${correctAnswer}」です。`);
 		}
-	}
+	};
 
 	return (
 		<div className="min-h-screen bg-gray-50 p-8">
@@ -22,7 +25,7 @@ function App() {
 					<textarea
 						className="w-full rounded-md border border-gray-300 p-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
 						rows={10}
-						placeholder="テキストを入力してください..."
+						placeholder="(Religion)"
 						value={text}
 						onChange={(e) => setText(e.target.value)}
 					/>
@@ -49,7 +52,7 @@ function App() {
 				</div>
 			</div>
 		</div>
-	)
+	);
 }
 
-export default App
+export default App;
