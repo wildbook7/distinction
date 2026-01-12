@@ -1,0 +1,10 @@
+function App() {
+
+  return (
+    <div className="text-orange-500">
+      Hi!
+    </div>
+  )
+}
+
+export default App
